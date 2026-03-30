@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Führungszeugnis Generator</title>
+<style>
+body { font-family: Arial; margin: 40px; }
+input, textarea { width: 300px; padding: 8px; margin-bottom: 10px; }
+button { padding: 10px 20px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<h2>Führungszeugnis erstellen</h2>
+
+<form action="/create" method="POST">
+    <label>Antragsteller:</label><br>
+    <input name="antragsteller" required><br>
+
+    <label>Geburtsdatum:</label><br>
+    <input name="geburtsdatum" type="date" required><br>
+
+    <label>Geburtsort:</label><br>
+    <input name="geburtsort" required><br>
+
+    <label>Vorstrafen:</label><br>
+    <textarea name="vorstrafen" rows="4"></textarea><br>
+
+    <label>Datum:</label><br>
+    <input name="datum" type="date" required><br>
+
+    <h3>Sachbearbeiter</h3>
+
+    <label>Name:</label><br>
+    <input name="sb_name" required><br>
+
+    <label>Dienstgrad / Beschäftigung:</label><br>
+    <input name="sb_dienstgrad" required><br>
+
+    <button type="submit">PDF erstellen</button>
+</form>
+
+<br><br>
+<a href="/archiv">Zum Archiv</a>
+
+</body>
+</html>
